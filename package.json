@@ -1,0 +1,29 @@
+{
+  "name": "kankur.xyz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olso/kankur.xyz.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/olso/kankur.xyz/issues"
+  },
+  "homepage": "https://github.com/olso/kankur.xyz#readme",
+  "devDependencies": {
+    "webpack": "4.0.0-beta.1",
+    "webpack-cli": "2.0.6"
+  },
+  "dependencies": {
+    "blotter": "^2.1.0"
+  }
+}
