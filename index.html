@@ -7,6 +7,11 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
+    :root {
+      --color-purple: #9b5db0;
+      --color-pink: hotpink;
+    }
+
     body {
       padding: 0 1rem 1rem 1rem;
       font-family: Avenir, Lato, "Helvetica Neue", "Calibri Light", sans-serif;
@@ -15,7 +20,7 @@
     }
 
     a {
-      color: #9b5db0
+      color: var(--color-purple);
     }
 
     a:visited {
@@ -23,16 +28,19 @@
     }
 
     a:hover {
-      color: hotpink;
+      color: var(--color-pink);
     }
 
     a:active {
       color: yellow;
     }
 
-    dt,
+    /* dt {} */
+
     dd {
-      padding: 0.3rem;
+      padding-top: 0.7rem;
+      padding-bottom: 0.7rem;
+      color: var(--color-pink);
     }
 
     section div,
