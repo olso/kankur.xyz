@@ -9,6 +9,7 @@
   <style>
     :root {
       --color-purple: #9b5db0;
+      --color-gold: gold;
       --color-pink: hotpink;
       --color-pink-hover: rgb(228, 127, 178);
     }
@@ -23,32 +24,6 @@
     a {
       color: var(--color-purple);
     }
-
-    section.people {
-    }
-
-    section.people a:not(:last-child) {
-      margin-bottom: 1rem;
-    }
-
-    .button {
-      border: 1px solid var(--color-pink);
-      color: var(--color-pink);
-      border-radius: 1rem;
-      padding: 1rem;
-      display: inline-block;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 1.5rem;
-    }
-
-    .button:hover {
-      text-decoration: underline;
-    }
-
-    /* a:visited {
-      color: rgb(111, 234, 111);
-    } */
 
     a:hover {
       color: var(--color-pink);
@@ -79,6 +54,36 @@
     dd {
       font-size: 1.5rem;
     }
+
+    section.people {}
+
+    section.people a:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+
+    .button {
+      border: 1px solid var(--color-pink);
+      color: var(--color-pink);
+      border-radius: 1rem;
+      padding: 1rem;
+      display: inline-block;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.5rem;
+    }
+
+    .button:hover {
+      text-decoration: underline;
+    }
+
+    .button-gold {
+      border-color: var(--color-gold);
+      color: var(--color-gold);
+    }
+
+    .button-gold:hover {
+      color: var(--color-gold);
+    }
   </style>
 </head>
 
@@ -86,6 +91,7 @@
   <main>
     <h1>Kankur s.r.o.</h1>
     <p>Software consultancy for high-impact projects 🧪</p>
+    <small>Robíme aj pre neziskovky, občianske združenia, startupy.</small>
   </main>
   <!-- <section>
     <h2>People</h2>
@@ -94,8 +100,20 @@
   <section class="people">
     <h2>People</h2>
     <div>
-      <a class="button" href="https://olso.space" target="_blank">Hire Martin Olsansky 📡</a>
-      <a class="button" href="https://www.linkedin.com/in/ivana-zemanovicova/" target="_blank">Hire Iva Zemanovicova 🧠</a>
+      <a class="button button-gold" href="mailto:olso@kankur.xyz?subject=Hire%20a%20team" taget="_blank">
+        Hire a team 👩‍👦‍👦
+      </a>
+    </div>
+    <div>
+      <a class="button" href="https://olso.space" target="_blank">
+        Hire Martin Olsansky 📡
+      </a>
+      <a class="button" href="https://www.linkedin.com/in/ivana-zemanovicova/" target="_blank">
+        Hire Iva Zemanovicova 🧠
+      </a>
+    </div>
+    <div>
+
     </div>
   </section>
   <section>
