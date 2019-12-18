@@ -7,16 +7,26 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
+    html {
+      font-family: "Lato", "Helvetica Neue", "Calibri Light", sans-serif;
+      /* 10px? https://engageinteractive.co.uk/blog/em-vs-rem-vs-px */
+      font-size: 62.5%;
+      height: 100%;
+      width: 100%;
+    }
+
     :root {
       --color-purple: #9b5db0;
       --color-gold: gold;
       --color-pink: hotpink;
       --color-pink-hover: rgb(228, 127, 178);
+      --person-size: 300px;
     }
 
     body {
       padding: 0 1rem 1rem 1rem;
       font-family: Avenir, Lato, "Helvetica Neue", "Calibri Light", sans-serif;
+      font-size: 2rem;
       background-color: black;
       color: white;
     }
@@ -36,14 +46,14 @@
     /* dt {} */
 
     dd {
-      padding-top: 0.7rem;
-      padding-bottom: 0.7rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
       color: var(--color-pink);
     }
 
     section div,
     li {
-      padding: 0.3rem;
+      padding: 1rem;
       padding-left: 0;
     }
 
@@ -84,6 +94,44 @@
     .button-gold:hover {
       color: var(--color-gold);
     }
+
+    div.people-list {
+      display: flex;
+      flex-direction: row;
+    }
+
+    @media only screen and (max-width: 600px) {
+      div.people-list {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    div.person {
+      background-repeat: no-repeat;
+      background-size: var(--person-size) var(--person-size);
+      width: var(--person-size);
+      height: var(--person-size);
+      padding: 0;
+      position: relative;
+      margin-right: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    div.person>.button {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      padding: 0.5rem;
+      display: block;
+      background-color: var(--color-pink);
+      color: white;
+      text-align: center;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
   </style>
 </head>
 
@@ -98,28 +146,29 @@
     <div><a href="https://olso.space" target="_blank">Martin Olsansky</a></div>
   </section> -->
   <section class="people">
-    <h2>People</h2>
+    <h2>Ľudia</h2>
     <div>
       <a class="button button-gold" href="mailto:olso@kankur.xyz?subject=Hire%20a%20team" taget="_blank">
-        Hire a team 👩‍👦‍👦
+        Dohodnite si s nami stretnutie 👩‍👦‍👦
       </a>
     </div>
-    <div>
-      <a class="button" href="https://olso.space" target="_blank">
-        Hire Martin Olsansky 📡
-      </a>
-      <a class="button" href="https://www.linkedin.com/in/ivana-zemanovicova/" target="_blank">
-        Hire Iva Zemanovicova 🧠
-      </a>
-    </div>
-    <div>
-
+    <div class="people-list">
+      <div class="person" style="background-image: url('./img/olso.jpg');">
+        <a class="button" href="https://olso.space" target="_blank">
+          Martin Olsansky 📡
+        </a>
+      </div>
+      <div class="person" style="background-image: url('./img/ewe.jpg');">
+        <a class="button" href="https://www.linkedin.com/in/ivana-zemanovicova/" target="_blank">
+          Iva Zemanovicova 🧠
+        </a>
+      </div>
     </div>
   </section>
   <section>
-    <h2>Billing info</h2>
+    <h2>Fakturačné údaje</h2>
     <dl>
-      <dt>Názov (Company name)</dt>
+      <dt>Názov firmy</dt>
       <dd>Kankur s. r. o.</dd>
       <dt>IČO (Local company ID)</dt>
       <dd>47703971</dd>
@@ -127,19 +176,21 @@
       <dd>2024059323</dd>
       <dt>IČ DPH (EU VAT/TAX ID)</dt>
       <dd>SK2024059323</dd>
-      <dt>Sídlo (Address)</dt>
+      <dt>Adresa</dt>
       <dd>Markova 1069/15, 851 01, Bratislava</dd>
-      <dt>Dátum vzniku (Established)</dt>
-      <dd>streda, 19. marca 2014; (19.03.2014)</dd>
-      <dt>IBAN</dt>
+      <dt>IBAN (Tatra banka)</dt>
       <dd>SK59 1100 0000 0029 4500 1407</dd>
     </dl>
   </section>
-  <!-- <section>
-    <h2>Projects</h2>
-  </section> -->
+  <section>
+    <h2>Naša práca</h2>
+    <div>TODO: Pridáme 😊</div>
+  </section>
   <section>
     <h2>Links</h2>
+    <div>
+      <a href="https:/www.biospher.org" target="_blank">Biospher</a>
+    </div>
     <div>
       <a href="https://martinolsansky.com" target="_blank">https://martinolsansky.com</a>
     </div>
